@@ -1,0 +1,102 @@
+.shortcuts-modal {
+  width: 700px;
+  max-height: 80vh;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.shortcuts-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.shortcuts-modal .modal-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.shortcuts-modal .modal-close {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.shortcuts-modal .modal-close:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.shortcuts-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.shortcut-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.shortcut-section h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.shortcut-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shortcut-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.shortcut-key {
+  font-family: -apple-system, BlinkMacSystemFont, monospace;
+  font-size: 11px;
+  padding: 4px 8px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  white-space: nowrap;
+  min-width: 50px;
+  text-align: center;
+}
+
+.shortcut-action {
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .shortcuts-modal {
+    width: 95vw;
+  }
+  
+  .shortcuts-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

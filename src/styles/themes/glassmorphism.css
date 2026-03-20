@@ -1,0 +1,15 @@
+/* Glassmorphism — heavy glass effects */
+:root[data-theme-style="glassmorphism"] {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #1a1a3e;
+  --bg-glass: rgba(255,255,255,0.08);
+  --border-glass: rgba(255,255,255,0.18);
+  --glass-blur: 20px;
+}
+
+/* Glassmorphism toolbar gradient */
+:root[data-theme-style="glassmorphism"] .toolbar {
+  background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.05)),
+              var(--bg-secondary);
+}

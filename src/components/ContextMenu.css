@@ -1,0 +1,104 @@
+.context-menu {
+  position: fixed;
+  z-index: 10000;
+  min-width: 200px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 4px 0;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  animation: contextMenuIn 0.1s ease-out;
+}
+
+@keyframes contextMenuIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.context-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 12px;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+  text-align: left;
+  gap: 24px;
+}
+
+.context-menu-item:hover:not(:disabled) {
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  margin: 0 4px;
+  width: calc(100% - 8px);
+}
+
+.context-menu-item:hover:not(:disabled) .context-menu-shortcut {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.context-menu-item:disabled {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.context-menu-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.context-menu-label {
+  white-space: nowrap;
+}
+
+.context-menu-shortcut {
+  color: var(--text-secondary);
+  font-size: 12px;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.context-menu-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 4px 8px;
+}
+
+/* Light theme */
+[data-theme="light"] .context-menu {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="light"] .context-menu-item {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .context-menu-item:disabled {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .context-menu-shortcut {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .context-menu-divider {
+  background: var(--border-color);
+}

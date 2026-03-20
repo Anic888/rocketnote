@@ -1,0 +1,73 @@
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-primary);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.terminal-title {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.terminal-cwd {
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60%;
+}
+
+.terminal-xterm {
+  flex: 1;
+  padding: 8px;
+  overflow: hidden;
+}
+
+/* Override xterm.js default styles */
+.terminal-xterm .xterm {
+  height: 100%;
+}
+
+.terminal-xterm .xterm-viewport {
+  overflow-y: auto !important;
+}
+
+.terminal-xterm .xterm-viewport::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-xterm .xterm-viewport::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+.terminal-xterm .xterm-viewport::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--radius-sm);
+}
+
+.terminal-xterm .xterm-viewport::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Ensure terminal takes full space */
+.terminal-xterm .xterm-screen {
+  width: 100% !important;
+}
+
+/* Link styling */
+.terminal-xterm .xterm-link-layer a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}

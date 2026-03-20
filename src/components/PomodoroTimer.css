@@ -1,0 +1,74 @@
+.pomodoro-timer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--bg-tertiary);
+}
+
+.pomodoro-timer.work .timer-progress {
+  background: linear-gradient(90deg, rgba(239, 83, 80, 0.3), rgba(239, 83, 80, 0.5));
+}
+
+.pomodoro-timer.break .timer-progress {
+  background: linear-gradient(90deg, rgba(76, 175, 80, 0.3), rgba(76, 175, 80, 0.5));
+}
+
+.timer-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.timer-display:hover {
+  background: var(--bg-hover);
+}
+
+.timer-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: width 1s linear;
+}
+
+.timer-icon {
+  font-size: 14px;
+  z-index: 1;
+}
+
+.timer-time {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.timer-reset {
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.timer-reset:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.session-count {
+  font-size: 11px;
+  padding: 2px 6px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 10px;
+  min-width: 20px;
+  text-align: center;
+}

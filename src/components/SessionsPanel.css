@@ -1,0 +1,95 @@
+.sessions-panel {
+  display: flex;
+  gap: 24px;
+  padding: 12px;
+  height: 100%;
+}
+
+.sessions-save {
+  flex: 0 0 300px;
+}
+
+.sessions-save h4,
+.sessions-list h4 {
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.save-form {
+  display: flex;
+  gap: 8px;
+}
+
+.save-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.save-form button {
+  padding: 8px 16px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.save-form button:disabled {
+  opacity: 0.5;
+}
+
+.save-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.sessions-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.no-sessions {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: var(--bg-tertiary);
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.session-item:hover {
+  background: var(--bg-hover);
+}
+
+.session-name {
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.session-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+}
+
+.session-item:hover .session-actions {
+  opacity: 1;
+}
+
+.session-actions button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.session-actions button:hover {
+  background: var(--bg-active);
+}

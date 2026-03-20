@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#302b63"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    
+    <linearGradient id="bracketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    
+    <linearGradient id="rocketBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b9d"/>
+      <stop offset="50%" stop-color="#ff4081"/>
+      <stop offset="100%" stop-color="#c51162"/>
+    </linearGradient>
+    
+    <linearGradient id="windowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64ffda"/>
+      <stop offset="100%" stop-color="#00bcd4"/>
+    </linearGradient>
+    
+    <linearGradient id="flameOuter" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#ff5722"/>
+    </linearGradient>
+    
+    <linearGradient id="flameInner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffeb3b"/>
+      <stop offset="100%" stop-color="#ff9800"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Фон -->
+  <rect width="1024" height="1024" rx="228" ry="228" fill="url(#bgGrad)"/>
+  
+  <!-- Звёзды -->
+  <circle cx="150" cy="200" r="4" fill="white" opacity="0.8"/>
+  <circle cx="120" cy="350" r="3" fill="white" opacity="0.5"/>
+  <circle cx="200" cy="150" r="3" fill="white" opacity="0.6"/>
+  <circle cx="880" cy="180" r="4" fill="white" opacity="0.7"/>
+  <circle cx="850" cy="280" r="3" fill="white" opacity="0.4"/>
+  <circle cx="920" cy="350" r="3" fill="white" opacity="0.5"/>
+  <circle cx="130" cy="700" r="3" fill="white" opacity="0.5"/>
+  <circle cx="180" cy="800" r="4" fill="white" opacity="0.6"/>
+  <circle cx="100" cy="850" r="3" fill="white" opacity="0.4"/>
+  <circle cx="870" cy="720" r="3" fill="white" opacity="0.5"/>
+  <circle cx="920" cy="800" r="4" fill="white" opacity="0.7"/>
+  <circle cx="850" cy="880" r="3" fill="white" opacity="0.4"/>
+  
+  <!-- Цветные звёзды -->
+  <circle cx="180" cy="250" r="5" fill="#64ffda" opacity="0.9"/>
+  <circle cx="850" cy="220" r="5" fill="#7c3aed" opacity="0.8"/>
+  <circle cx="160" cy="780" r="4" fill="#f472b6" opacity="0.7"/>
+  <circle cx="870" cy="800" r="5" fill="#00d4ff" opacity="0.8"/>
+  
+  <!-- Левая скобка < -->
+  <path d="M300 340 L170 512 L300 684" 
+        fill="none" 
+        stroke="url(#bracketGrad)" 
+        stroke-width="56" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Правая скобка > -->
+  <path d="M724 340 L854 512 L724 684" 
+        fill="none" 
+        stroke="url(#bracketGrad)" 
+        stroke-width="56" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Пламя (под ракетой) -->
+  <ellipse cx="467" cy="700" rx="28" ry="70" fill="url(#flameOuter)"/>
+  <ellipse cx="557" cy="700" rx="28" ry="70" fill="url(#flameOuter)"/>
+  <ellipse cx="512" cy="720" rx="35" ry="90" fill="url(#flameOuter)"/>
+  
+  <ellipse cx="467" cy="690" rx="18" ry="50" fill="url(#flameInner)"/>
+  <ellipse cx="557" cy="690" rx="18" ry="50" fill="url(#flameInner)"/>
+  <ellipse cx="512" cy="705" rx="22" ry="65" fill="url(#flameInner)"/>
+  
+  <ellipse cx="512" cy="680" rx="12" ry="35" fill="white" opacity="0.9"/>
+  
+  <!-- Боковые крылья -->
+  <path d="M427 580 L392 680 L427 660 Z" fill="#c51162"/>
+  <path d="M597 580 L632 680 L597 660 Z" fill="#c51162"/>
+  
+  <!-- Корпус ракеты -->
+  <path d="M512 300 
+           C592 300, 612 400, 612 500
+           L612 620
+           L572 640
+           L572 660
+           L452 660
+           L452 640
+           L412 620
+           L412 500
+           C412 400, 432 300, 512 300Z" 
+        fill="url(#rocketBody)"/>
+  
+  <!-- Блик на корпусе -->
+  <path d="M452 350 
+           C492 320, 532 400, 552 500
+           L552 580
+           L452 580
+           Z" 
+        fill="white" opacity="0.15"/>
+  
+  <!-- Окно -->
+  <circle cx="512" cy="450" r="50" fill="#1a1a2e"/>
+  <circle cx="512" cy="450" r="46" fill="none" stroke="#64ffda" stroke-width="4"/>
+  <circle cx="512" cy="450" r="38" fill="url(#windowGrad)" opacity="0.8"/>
+  <ellipse cx="500" cy="438" rx="12" ry="16" fill="white" opacity="0.6"/>
+  
+  <!-- Детали корпуса -->
+  <rect x="442" y="560" width="140" height="8" fill="#1a1a2e" opacity="0.3" rx="4"/>
+  <rect x="442" y="590" width="140" height="8" fill="#1a1a2e" opacity="0.3" rx="4"/>
+  
+  <!-- Искры -->
+  <circle cx="440" cy="750" r="5" fill="#ffeb3b"/>
+  <circle cx="460" cy="780" r="4" fill="#ff9800"/>
+  <circle cx="420" cy="770" r="3" fill="#ffeb3b"/>
+  <circle cx="580" cy="755" r="5" fill="#ffeb3b"/>
+  <circle cx="560" cy="785" r="4" fill="#ff9800"/>
+  <circle cx="600" cy="765" r="3" fill="#ffeb3b"/>
+</svg>

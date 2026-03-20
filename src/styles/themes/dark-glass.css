@@ -1,0 +1,5 @@
+/* Dark Glass Hybrid — default theme style */
+/* Base values are in global.css :root, this file exists for completeness */
+:root[data-theme-style="dark-glass"] {
+  --glass-blur: 12px;
+}

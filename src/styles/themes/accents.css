@@ -1,0 +1,22 @@
+/* Accent color overrides */
+/* Note: Indigo is the default accent, defined in global.css :root. No rule needed here. */
+:root[data-accent="blue"] {
+  --accent-color: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-glow: rgba(59,130,246,0.15);
+}
+:root[data-accent="emerald"] {
+  --accent-color: #10b981;
+  --accent-hover: #34d399;
+  --accent-glow: rgba(16,185,129,0.15);
+}
+:root[data-accent="violet"] {
+  --accent-color: #8b5cf6;
+  --accent-hover: #a78bfa;
+  --accent-glow: rgba(139,92,246,0.15);
+}
+:root[data-accent="rose"] {
+  --accent-color: #f43f5e;
+  --accent-hover: #fb7185;
+  --accent-glow: rgba(244,63,94,0.15);
+}

@@ -1,0 +1,225 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-tab {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-tab:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.sidebar-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-color);
+}
+
+.sidebar-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.folder-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-tertiary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.folder-icon {
+  font-size: 14px;
+}
+
+.folder-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-tree {
+  padding: 4px 0;
+}
+
+.tree-item-wrapper {
+  user-select: none;
+}
+
+.tree-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background var(--transition-fast);
+}
+
+.tree-item:hover {
+  background: var(--bg-hover);
+}
+
+.tree-item.folder {
+  color: var(--text-primary);
+}
+
+.tree-item.file {
+  color: var(--text-secondary);
+}
+
+.tree-item.file:hover {
+  color: var(--text-primary);
+}
+
+.folder-arrow {
+  font-size: 8px;
+  width: 16px;
+  text-align: center;
+  transition: transform var(--transition-fast);
+  color: var(--text-muted);
+}
+
+.folder-arrow.expanded {
+  transform: rotate(90deg);
+}
+
+.tree-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.tree-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tree-children {
+  /* Children are indented via padding in renderNode */
+}
+
+.no-folder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.no-folder p {
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.no-folder button {
+  padding: 8px 16px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  transition: background var(--transition-fast);
+}
+
+.no-folder button:hover {
+  background: var(--accent-hover);
+}
+
+.sidebar-resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  cursor: col-resize;
+  background: transparent;
+  transition: background var(--transition-fast);
+}
+
+.sidebar-resizer:hover,
+.sidebar-resizer.resizing {
+  background: var(--accent-color);
+}
+
+/* Bookmarks */
+.bookmarks-list {
+  padding: 8px;
+}
+
+.no-bookmarks {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+}
+
+.no-bookmarks p {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.no-bookmarks .hint {
+  font-size: 11px;
+}
+
+.bookmark-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background var(--transition-fast);
+}
+
+.bookmark-item:hover {
+  background: var(--bg-hover);
+}
+
+.bookmark-icon {
+  font-size: 14px;
+}
+
+.bookmark-file {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bookmark-line {
+  color: var(--text-muted);
+  font-family: monospace;
+  font-size: 11px;
+}

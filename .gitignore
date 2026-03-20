@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+src-tauri/target/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Environment
+.env
+.env.*
+
+# Claude Code
+.claude/
+.superpowers/
+
+# Docs (internal)
+docs/superpowers/
+
+# Backup
+backup-*/

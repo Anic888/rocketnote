@@ -1,0 +1,180 @@
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  background: var(--accent-color);
+  color: white;
+  font-size: 12px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.status-left,
+.status-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-item {
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.status-item.clickable {
+  cursor: pointer;
+}
+
+.status-item.clickable:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Trust Indicator Styles */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.status-icon {
+  font-size: 11px;
+}
+
+.last-saved {
+  opacity: 0.7;
+  font-size: 11px;
+  margin-left: 2px;
+}
+
+/* Status Colors */
+.status-clean {
+  background: rgba(76, 175, 80, 0.2);
+}
+
+.status-clean .status-icon {
+  color: #81c784;
+}
+
+.status-dirty {
+  background: rgba(255, 193, 7, 0.3);
+}
+
+.status-dirty .status-icon {
+  color: #ffd54f;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.status-saving {
+  background: rgba(33, 150, 243, 0.2);
+}
+
+.status-saving .status-icon {
+  color: #64b5f6;
+  animation: spin 1s linear infinite;
+}
+
+.status-saved {
+  background: rgba(76, 175, 80, 0.3);
+}
+
+.status-saved .status-icon {
+  color: #81c784;
+  animation: pop 0.3s ease-out;
+}
+
+.status-error {
+  background: rgba(244, 67, 54, 0.3);
+}
+
+.status-error .status-icon {
+  color: #ef5350;
+}
+
+/* Auto-save indicator */
+.auto-save-indicator {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+}
+
+/* Encrypted file indicator */
+.encrypted-indicator {
+  background: rgba(255, 152, 0, 0.3);
+  color: #fff;
+  font-weight: 500;
+  font-size: 11px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Git branch */
+.status-item.git-branch {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.status-separator {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Language selector */
+.language-selector {
+  position: relative;
+}
+
+.language-menu {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 4px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  max-height: 300px;
+  overflow-y: auto;
+  min-width: 150px;
+  z-index: 100;
+}
+
+.language-option {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  color: var(--text-primary);
+  font-size: 13px;
+  transition: background var(--transition-fast);
+}
+
+.language-option:hover {
+  background: var(--bg-hover);
+}
+
+.language-option.active {
+  background: var(--bg-active);
+  font-weight: 500;
+}
+
+.language-option:first-child {
+  border-radius: 7px 7px 0 0;
+}
+
+.language-option:last-child {
+  border-radius: 0 0 7px 7px;
+}

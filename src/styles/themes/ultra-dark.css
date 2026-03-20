@@ -1,0 +1,15 @@
+/* Ultra Dark — near-black aesthetic (Linear, Raycast style) */
+:root[data-theme-style="ultra-dark"] {
+  --bg-primary: #09090b;
+  --bg-secondary: #0f0f12;
+  --bg-tertiary: #18181b;
+  --bg-hover: #1f1f23;
+  --bg-active: #162040;
+  --bg-glass: rgba(255,255,255,0.02);
+  --border-color: rgba(255,255,255,0.06);
+  --border-glass: rgba(255,255,255,0.06);
+  --glass-blur: 0px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.6);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.7);
+}

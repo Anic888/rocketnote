@@ -1,0 +1,229 @@
+.about-modal {
+  width: 420px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-modal .modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--text-secondary);
+  z-index: 10;
+}
+
+.about-modal .modal-close:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px 30px;
+  text-align: center;
+}
+
+.about-logo {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+
+.about-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.about-content .version {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.about-content .tagline {
+  font-size: 14px;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 340px;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.feature-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-row span {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 4px 12px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-lg);
+}
+
+.about-links {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-links button {
+  padding: 8px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.about-links button:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+.about-tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.about-tech > span {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tech-badges {
+  display: flex;
+  gap: 8px;
+}
+
+.tech-badges .badge {
+  padding: 4px 10px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.about-copyright {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Content Modal Styles */
+.about-modal.content-modal {
+  width: 500px;
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-back {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.modal-back:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.content-view {
+  padding: 50px 30px 30px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.content-view h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.content-text {
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.content-text h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  color: var(--text-primary);
+}
+
+.content-text h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 16px 0 8px;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.content-text h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 12px 0 6px;
+  color: var(--text-primary);
+}
+
+.content-text p {
+  margin: 4px 0;
+}
+
+.content-text li {
+  margin: 4px 0 4px 20px;
+  list-style-type: disc;
+}
+
+.content-text strong {
+  color: var(--text-primary);
+}

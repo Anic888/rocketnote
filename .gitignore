@@ -26,3 +26,10 @@ docs/superpowers/
 
 # Backup
 backup-*/
+
+# Internal build files
+icon.iconset/
+fix-icons.sh
+generate-icons.sh
+src-tauri/Entitlements.plist
+src-tauri/Info.plist

@@ -346,7 +346,7 @@ const Editor = forwardRef<EditorRef, EditorProps>(({
         return part.replace(/</g, '&lt;').replace(/>/g, '&gt;');
       }).join('');
     } catch {
-      return tab.content;
+      return tab.content.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     }
   }, [tab.content, searchQuery, searchCaseSensitive, searchWholeWord, searchUseRegex]);
 

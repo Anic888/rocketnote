@@ -132,7 +132,7 @@ pub fn git_diff(path: String, file_path: Option<String>) -> Result<String, Strin
 #[tauri::command]
 pub fn git_stage(path: String, file_path: String) -> Result<(), String> {
     Command::new("git")
-        .args(["add", &file_path])
+        .args(["add", "--", &file_path])
         .current_dir(&path)
         .output()
         .map_err(|e| e.to_string())?;
@@ -142,7 +142,7 @@ pub fn git_stage(path: String, file_path: String) -> Result<(), String> {
 #[tauri::command]
 pub fn git_unstage(path: String, file_path: String) -> Result<(), String> {
     Command::new("git")
-        .args(["reset", "HEAD", &file_path])
+        .args(["reset", "HEAD", "--", &file_path])
         .current_dir(&path)
         .output()
         .map_err(|e| e.to_string())?;
@@ -198,7 +198,7 @@ pub fn git_pull(path: String) -> Result<String, String> {
 #[tauri::command]
 pub fn git_blame(path: String, file_path: String) -> Result<String, String> {
     let output = Command::new("git")
-        .args(["blame", &file_path])
+        .args(["blame", "--", &file_path])
         .current_dir(&path)
         .output()
         .map_err(|e| e.to_string())?;

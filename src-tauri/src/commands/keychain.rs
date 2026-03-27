@@ -1,10 +1,22 @@
 use std::process::Command;
 
+/// Validate secret name contains only safe characters
+fn validate_name(name: &str) -> Result<(), String> {
+    if name.is_empty() || name.len() > 128 {
+        return Err("Invalid secret name: must be 1-128 characters".to_string());
+    }
+    if !name.chars().all(|c| c.is_alphanumeric() || c == '-' || c == '.' || c == '_') {
+        return Err("Invalid secret name: only alphanumeric, hyphens, dots, and underscores allowed".to_string());
+    }
+    Ok(())
+}
+
 fn keychain_service(name: &str) -> String {
-    format!("com.notepad.mac.{}", name)
+    format!("com.rocketnote.app.{}", name)
 }
 
 fn store_secret_value(name: &str, value: &str) -> Result<(), String> {
+    validate_name(name)?;
     let service = keychain_service(name);
     let account = "secret";
 
@@ -25,6 +37,7 @@ fn store_secret_value(name: &str, value: &str) -> Result<(), String> {
 }
 
 fn get_secret_value(name: &str) -> Result<String, String> {
+    validate_name(name)?;
     let service = keychain_service(name);
     let account = "secret";
 
@@ -41,6 +54,7 @@ fn get_secret_value(name: &str) -> Result<String, String> {
 }
 
 fn delete_secret_value(name: &str) -> Result<(), String> {
+    validate_name(name)?;
     let service = keychain_service(name);
     let account = "secret";
 

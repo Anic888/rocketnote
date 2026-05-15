@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="RocketNote editor mock — showing encrypted file, AI assistant, and integrated terminal">
+  <defs>
+    <linearGradient id="appBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0c1438"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="paneBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#161625"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window shell -->
+  <rect x="10" y="10" width="880" height="500" rx="12" fill="url(#appBg)" stroke="#312e81" stroke-width="1"/>
+  <!-- Title bar -->
+  <rect x="10" y="10" width="880" height="36" rx="12" fill="#0f0f23"/>
+  <rect x="10" y="36" width="880" height="10" fill="#0f0f23"/>
+  <circle cx="34" cy="28" r="6" fill="#ff5f57"/>
+  <circle cx="56" cy="28" r="6" fill="#febc2e"/>
+  <circle cx="78" cy="28" r="6" fill="#28c840"/>
+  <text x="450" y="33" text-anchor="middle" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="13" font-weight="500" fill="#a5b4fc">RocketNote — ~/projects/api/auth.ts 🔒</text>
+
+  <!-- Activity bar (left) -->
+  <rect x="10" y="46" width="44" height="464" fill="#0f0f23"/>
+  <g font-family="ui-sans-serif, -apple-system, sans-serif" font-size="14" fill="#6366f1" text-anchor="middle">
+    <text x="32" y="80">📁</text>
+    <text x="32" y="115">🔍</text>
+    <text x="32" y="150">🌿</text>
+    <text x="32" y="185">🔧</text>
+    <text x="32" y="220">⚙</text>
+  </g>
+
+  <!-- File explorer -->
+  <rect x="54" y="46" width="180" height="464" fill="#13132a"/>
+  <text x="68" y="74" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6b7280" letter-spacing="1">EXPLORER</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">
+    <text x="68" y="100" fill="#e5e7eb">▾ api/</text>
+    <text x="80" y="120" fill="#a78bfa">📄 auth.ts</text>
+    <text x="160" y="120" fill="#10b981">🔒</text>
+    <text x="80" y="140" fill="#94a3b8">📄 routes.ts</text>
+    <text x="80" y="160" fill="#94a3b8">📄 schema.ts</text>
+    <text x="68" y="180" fill="#e5e7eb">▾ lib/</text>
+    <text x="80" y="200" fill="#94a3b8">📄 crypto.rs</text>
+    <text x="160" y="200" fill="#10b981">🔒</text>
+    <text x="80" y="220" fill="#94a3b8">📄 keychain.rs</text>
+    <text x="68" y="240" fill="#94a3b8">📄 README.md</text>
+    <text x="68" y="260" fill="#94a3b8">📄 Cargo.toml</text>
+  </g>
+
+  <!-- Editor -->
+  <rect x="234" y="46" width="466" height="320" fill="url(#paneBg)"/>
+  <!-- Tab bar -->
+  <rect x="234" y="46" width="466" height="30" fill="#0f0f23"/>
+  <rect x="240" y="48" width="160" height="28" rx="3" fill="#1a1a2e"/>
+  <text x="260" y="66" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="12" fill="#a78bfa">auth.ts</text>
+  <text x="370" y="66" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="12" fill="#10b981">🔒</text>
+  <text x="386" y="66" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="13" fill="#6b7280">×</text>
+
+  <!-- Line numbers + code -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">
+    <g fill="#4b5563" text-anchor="end">
+      <text x="266" y="98">1</text>
+      <text x="266" y="118">2</text>
+      <text x="266" y="138">3</text>
+      <text x="266" y="158">4</text>
+      <text x="266" y="178">5</text>
+      <text x="266" y="198">6</text>
+      <text x="266" y="218">7</text>
+      <text x="266" y="238">8</text>
+      <text x="266" y="258">9</text>
+      <text x="266" y="278">10</text>
+    </g>
+    <text x="280" y="98"><tspan fill="#c084fc">import</tspan><tspan fill="#e5e7eb"> { </tspan><tspan fill="#fbbf24">decrypt</tspan><tspan fill="#e5e7eb"> } </tspan><tspan fill="#c084fc">from</tspan><tspan fill="#a3e635"> "./crypto"</tspan></text>
+    <text x="280" y="118"><tspan fill="#c084fc">import</tspan><tspan fill="#e5e7eb"> { </tspan><tspan fill="#fbbf24">keychain</tspan><tspan fill="#e5e7eb"> } </tspan><tspan fill="#c084fc">from</tspan><tspan fill="#a3e635"> "./tauri"</tspan></text>
+    <text x="280" y="138" fill="#6b7280">// stored in macOS Keychain, never in plain text</text>
+    <text x="280" y="158"><tspan fill="#c084fc">export async function</tspan><tspan fill="#fbbf24"> getApiKey</tspan><tspan fill="#e5e7eb">(</tspan><tspan fill="#f97316">provider</tspan><tspan fill="#e5e7eb">: </tspan><tspan fill="#06b6d4">string</tspan><tspan fill="#e5e7eb">) {</tspan></text>
+    <text x="280" y="178"><tspan fill="#e5e7eb">  </tspan><tspan fill="#c084fc">const</tspan><tspan fill="#e5e7eb"> ciphertext = </tspan><tspan fill="#c084fc">await</tspan><tspan fill="#e5e7eb"> keychain.</tspan><tspan fill="#fbbf24">read</tspan><tspan fill="#e5e7eb">(provider)</tspan></text>
+    <text x="280" y="198"><tspan fill="#e5e7eb">  </tspan><tspan fill="#c084fc">return</tspan><tspan fill="#e5e7eb"> </tspan><tspan fill="#fbbf24">decrypt</tspan><tspan fill="#e5e7eb">(ciphertext)  </tspan><tspan fill="#6b7280">// AES-256-GCM</tspan></text>
+    <text x="280" y="218" fill="#e5e7eb">{'}'}</text>
+  </g>
+
+  <!-- AI Assistant popup -->
+  <g transform="translate(480,250)">
+    <rect width="200" height="100" rx="10" fill="#0f0f23" stroke="#6366f1" stroke-width="1.5"/>
+    <rect width="200" height="26" rx="10" fill="#1e1b4b"/>
+    <rect y="16" width="200" height="10" fill="#1e1b4b"/>
+    <text x="12" y="18" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#a5b4fc">⌘K · AI Assistant</text>
+    <text x="184" y="18" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="11" fill="#6b7280">×</text>
+    <text x="12" y="46" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="11" fill="#e5e7eb">Refactor to use try/catch</text>
+    <text x="12" y="64" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="10" fill="#6b7280">Claude Opus 4.6 · 220 tokens</text>
+    <rect x="12" y="74" width="68" height="18" rx="3" fill="#6366f1"/>
+    <text x="46" y="86" text-anchor="middle" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#ffffff">Generate</text>
+    <text x="92" y="86" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#6b7280">⏎ run</text>
+  </g>
+
+  <!-- Right pane: Git -->
+  <rect x="700" y="46" width="190" height="320" fill="#13132a"/>
+  <text x="714" y="74" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#6b7280" letter-spacing="1">GIT</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">
+    <circle cx="722" cy="100" r="3" fill="#10b981"/>
+    <text x="734" y="104" fill="#e5e7eb">main</text>
+    <text x="714" y="128" fill="#94a3b8">Changes (2)</text>
+    <text x="722" y="148" fill="#f59e0b">M</text>
+    <text x="738" y="148" fill="#e5e7eb">auth.ts</text>
+    <text x="722" y="168" fill="#10b981">+</text>
+    <text x="738" y="168" fill="#e5e7eb">crypto.rs</text>
+    <text x="714" y="200" fill="#94a3b8">Recent</text>
+    <text x="714" y="220" fill="#e5e7eb">feat: encrypt</text>
+    <text x="714" y="234" fill="#6b7280">2 min ago</text>
+    <text x="714" y="258" fill="#e5e7eb">chore: deps</text>
+    <text x="714" y="272" fill="#6b7280">1 hour ago</text>
+  </g>
+
+  <!-- Terminal panel -->
+  <rect x="234" y="366" width="656" height="144" fill="#0a0a18"/>
+  <rect x="234" y="366" width="656" height="24" fill="#0f0f23"/>
+  <text x="248" y="384" font-family="ui-sans-serif, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#a78bfa">⌘` Terminal</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">
+    <text x="248" y="412"><tspan fill="#10b981">~/projects/api</tspan><tspan fill="#6366f1"> $</tspan><tspan fill="#e5e7eb"> cargo tauri dev</tspan></text>
+    <text x="248" y="432" fill="#94a3b8">  Compiling rocketnote v2.0.0</text>
+    <text x="248" y="452"><tspan fill="#10b981">  Finished</tspan><tspan fill="#94a3b8"> dev [unoptimized] in 1.42s</tspan></text>
+    <text x="248" y="472" fill="#94a3b8">  Loading on http://localhost:1420</text>
+    <text x="248" y="492"><tspan fill="#10b981">~/projects/api</tspan><tspan fill="#6366f1"> $</tspan><tspan fill="#e5e7eb"> ▌</tspan></text>
+  </g>
+
+  <!-- Status bar -->
+  <rect x="10" y="490" width="880" height="20" fill="#0f0f23"/>
+  <g font-family="ui-sans-serif, -apple-system, sans-serif" font-size="10" fill="#94a3b8">
+    <text x="64" y="504"><tspan fill="#10b981">●</tspan> main</text>
+    <text x="140" y="504">TypeScript</text>
+    <text x="220" y="504">UTF-8</text>
+    <text x="280" y="504">LF</text>
+    <text x="700" y="504">Ln 7, Col 21</text>
+    <text x="800" y="504"><tspan fill="#10b981">🔒 Encrypted</tspan></text>
+  </g>
+</svg>
